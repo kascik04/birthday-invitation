@@ -131,18 +131,18 @@
         }
 
         .bg-text.top {
-            top: 5vh;
+            top: 4vh;
             left: 50%;
             transform: translateX(-50%);
         }
 
         .bg-text.bottom {
-            bottom: 3vh;
+            bottom: 4vh;
             left: 50%;
             transform: translateX(-50%);
         }
 
-        /* Chữ Ký */
+        /* Chữ Ký (Đã canh giữa khối chữ nền) */
         .script-text {
             position: absolute;
             font-family: 'Meow Script', cursive;
@@ -154,13 +154,13 @@
         }
 
         .script-text.top {
-            top: 10vh;
+            top: 7vh; /* Kéo lên chính giữa BDAY */
             left: 50%;
             transform: translateX(-50%) rotate(-5deg);
         }
 
         .script-text.bottom {
-            bottom: 6vh;
+            bottom: 7vh; /* Kéo lên chính giữa PARTY */
             left: 50%;
             transform: translateX(-50%) rotate(-5deg);
         }
@@ -224,9 +224,9 @@
 
         /* Style riêng cho phần Note dài để dễ đọc hơn */
         .value.note-text {
-            text-transform: none; /* Không in hoa toàn bộ */
+            text-transform: none;
             font-size: clamp(11px, 3vw, 13px);
-            font-style: italic; /* In nghiêng tạo cảm giác nhắn nhủ */
+            font-style: italic;
             line-height: 1.4;
             color: #333;
         }
