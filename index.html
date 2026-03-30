@@ -2,11 +2,9 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <!-- Khóa zoom để có trải nghiệm giống Native App trên Mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Minh Khang's Birthday Invitation</title>
     
-    <!-- Import Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Meow+Script&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -124,7 +122,6 @@
         .bg-text {
             position: absolute;
             font-family: 'Anton', sans-serif;
-            /* Co giãn font tự động theo chiều cao/rộng của mobile */
             font-size: clamp(80px, 20vh, 180px);
             color: var(--blue-color);
             line-height: 0.8;
@@ -176,8 +173,7 @@
             border: 1.5px solid var(--text-color);
             width: 85%;
             max-width: 400px;
-            /* Padding linh hoạt theo màn hình */
-            padding: clamp(15px, 4vh, 30px);
+            padding: clamp(15px, 3vh, 30px);
             box-sizing: border-box;
             transform: rotate(-3deg);
             box-shadow: 4px 8px 20px rgba(0,0,0,0.15);
@@ -188,13 +184,13 @@
             text-align: center;
             font-size: clamp(12px, 3.5vw, 16px);
             font-weight: 700;
-            margin-bottom: clamp(20px, 4vh, 40px);
+            margin-bottom: clamp(15px, 3vh, 30px);
             line-height: 1.5;
             text-transform: uppercase;
         }
 
         .info-section {
-            margin-bottom: clamp(15px, 3vh, 25px);
+            margin-bottom: clamp(10px, 2vh, 20px);
         }
 
         .label {
@@ -202,7 +198,7 @@
             color: white;
             padding: 3px 10px;
             font-weight: 700;
-            font-size: clamp(12px, 3vw, 15px);
+            font-size: clamp(11px, 3vw, 14px);
             display: inline-block;
             margin-bottom: 5px;
             text-transform: uppercase;
@@ -226,9 +222,18 @@
             font-weight: 700;
         }
 
+        /* Style riêng cho phần Note dài để dễ đọc hơn */
+        .value.note-text {
+            text-transform: none; /* Không in hoa toàn bộ */
+            font-size: clamp(11px, 3vw, 13px);
+            font-style: italic; /* In nghiêng tạo cảm giác nhắn nhủ */
+            line-height: 1.4;
+            color: #333;
+        }
+
         .footer {
             text-align: center;
-            margin-top: clamp(20px, 4vh, 40px);
+            margin-top: clamp(15px, 3vh, 30px);
             font-size: clamp(11px, 3vw, 14px);
             font-weight: 700;
             text-transform: uppercase;
@@ -264,7 +269,6 @@
 </head>
 <body>
 
-    <!-- Trang nhập tên -->
     <div id="form-page">
         <div class="form-container">
             <h2>🎉 XIN CHÀO!</h2>
@@ -274,13 +278,10 @@
         </div>
     </div>
 
-    <!-- Trang thiệp mời -->
     <div id="invitation-page">
-        <!-- Chữ Nền -->
         <div class="bg-text top">BDAY</div>
         <div class="script-text top">Birthday</div>
 
-        <!-- Khung Thiệp -->
         <div class="card">
             <div class="greeting" id="guestGreeting">
                 HELLO, [GUEST_NAME]! YOU ARE<br>
@@ -288,9 +289,9 @@
             </div>
 
             <div class="info-section">
-                <div class="label">DATE</div>
+                <div class="label">DATE & TIME</div>
                 <div class="line"></div>
-                <p class="value large">SAT 3 APRIL 2026</p>
+                <p class="value large">SAT 3 APRIL 2026 @ 7PM</p>
             </div>
 
             <div class="info-section">
@@ -299,16 +300,20 @@
                 <p class="value">KHOAI BISTRO<br>(405/9 THỐNG NHẤT, GÒ VẤP)</p>
             </div>
 
+            <div class="info-section">
+                <div class="label">NOTE</div>
+                <div class="line"></div>
+                <p class="value note-text">*Vì lí do ngân sách eo hẹp, em Khang xin phép được nhờ ae phụ một phần xiền ăn... Em Khang arigato mọi người! 💕</p>
+            </div>
+
             <div class="footer">
                 CONTACT (036-488-3140)
             </div>
         </div>
 
-        <!-- Chữ Nền Dưới -->
         <div class="bg-text bottom">PARTY</div>
         <div class="script-text bottom">Party</div>
 
-        <!-- Lời nhắc nhỏ xíu cho UX -->
         <div class="screenshot-hint">📸 Chụp màn hình để lưu thiệp nhé!</div>
     </div>
 
